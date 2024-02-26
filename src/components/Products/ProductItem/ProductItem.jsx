@@ -1,17 +1,27 @@
 import s from './ProductItem.module.css'
 
-export const ProductItem = () => {
-	return (
-		<>
-			<div className={s.item}>
-					<div className={s.imageContainer}>
-						<img src="" alt="" className={s.img}/>
-					</div>
-					<div className={s.id}>iddddddd</div>
-					<div className={s.name}>Название</div>
-					<div className={s.brand}>Брэнд</div>
-					<div className={s.price}>2000 руб.</div>
-			</div>
-		</>
-	)
+export const ProductItem = ({ product }) => {
+  console.log('product', product)
+  // console.log('pid', product.id);
+  return (
+    <>
+      <div className={s.item}>
+        <div className={s.imageContainer}>
+          <img src="/public/img/diamonds.png" alt="icon" className={s.img} />
+        </div>
+        <div className={s.content}>
+          <div className={s.name}>{product.product}</div>
+          <div className={s.id}>
+            <span className={s.title}>Id:&nbsp;</span>
+            {product.id}
+          </div>
+          <div className={s.brand}>
+            <span className={s.title}>Brand:&nbsp;</span>
+            {product.brand}
+          </div>
+        </div>
+        <div className={s.price}>{product.price.toLocaleString()} руб.</div>
+      </div>
+    </>
+  )
 }

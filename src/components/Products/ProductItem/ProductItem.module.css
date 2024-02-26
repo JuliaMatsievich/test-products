@@ -1,27 +1,48 @@
+@import '../../../utils/variables.css';
+
 .item {
 	display: flex;
-	flex-direction: column;
+	column-gap: 30px;
+	border: 1px solid var(--colorLightGrey);
+	padding: 10px;
+	border-radius: 20px;
+	box-shadow: 4px 7px 9px -1px rgba(95, 94, 92, 0.56);
 }
 .imageContainer {
-	height: 270px;
-	position: relative;
+	height: 80px;
+	width: 80px;
+	/* position: relative;
 	padding: 0px 0px 90% 0px;
-	margin: 0px 0px 20px 0px;
-	border: none;
+	margin: 0px 0px 20px 0px; */
+	border: 1px solid red;
+	align-self: center;
 }
 .img {
-	width: 100%;
+	/* width: 100%;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
-	object-fit: cover;
+	object-fit: cover; */
+}
+.content {
+	flex: 1 0 auto;
 }
 .id {
+	margin-bottom: 10px;
 }
 .name {
+	margin-bottom: 15px;
+	font-size: 24px;
 }
 .brand {
+	margin-bottom: 10px;
 }
 .price {
+	font-size: 26px;
+	align-self: center;
+	color: var(--colorOrange)
+}
+.title {
+	font-weight: 600;
 }

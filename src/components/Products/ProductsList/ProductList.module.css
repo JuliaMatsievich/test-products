@@ -2,8 +2,7 @@
 	margin-bottom: 30px;
 }
 .items {
-	display: grid;
-	column-gap: 26px;
-	row-gap: 40px;
-	grid-template-columns: repeat(4, minmax(270px, 3fr));
+	display: flex;
+	flex-direction: column;
+		row-gap: 20px;
 }
