@@ -6,10 +6,10 @@
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "airbnb",
+        // "airbnb",
         "plugin:react/jsx-runtime",
         "plugin:react-hooks/recommended",
-        "plugin:import/recommended",
+        // "plugin:import/recommended",
         "prettier"
     ],
     "parserOptions": {
@@ -22,6 +22,10 @@
     "rules": {
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "import/prefer-default-export": "off",
-      "no-console": "off"
+      "no-console": "off",
+      "no-unused-vars": [
+        "warn",
+        { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+      ]
     }
 }
