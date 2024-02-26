@@ -1,4 +1,6 @@
 :root {
-  --colorRed: hsl(0deg 80% 50%);
-  --colorBlue: hsl(270deg 75% 60%);
+  --colorBlue: #7fbbc5;
+  --colorLightGrey: #e1e0de;
+  --colorDarkGrey: #5f5e5c;
+  --colorOrange: #c78e70;
 }

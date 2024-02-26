@@ -1,5 +1,19 @@
 @import '../../variables.css';
 
-.logoTitle{
-	color: var(--colorRed)
+.logoTitle {
+	color: white;
+}
+
+.header {
+	background-color: var(--colorBlue);
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.headerContainer {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 50px;
+	color: #fff;
 }

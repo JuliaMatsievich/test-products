@@ -1,3 +1,10 @@
+@font-face {
+	font-family: 'Roboto';
+  src: local('Roboto'),
+    url('/public/fonts/Roboto/Roboto-Regular.ttf') format('ttf');
+  font-weight: 400;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -18,10 +25,16 @@ body {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  font-family: "Roboto, sans-serif";
+  font-family: "Roboto", sans-serif;
+	font-size: 20px;
 }
 
 .container {
 	max-width: 1440px;
 	margin: 0 auto;
+}
+
+.centralContainer {
+  padding-left: 60px;
+  padding-right: 60px;
 }
