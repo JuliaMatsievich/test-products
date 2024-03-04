@@ -5,7 +5,12 @@ export const Pagination = () => {
     <>
       <div className="container">
         <div className={`${s.container} centralContainer`}>
-          <p>1</p>
+          <button type="button" className={s.prev}>
+            Пред.
+          </button>
+          <button type="button" className={s.next}>
+            След.
+          </button>
         </div>
       </div>
     </>

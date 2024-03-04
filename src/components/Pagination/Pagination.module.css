@@ -1,12 +1,9 @@
-
-
 .container {
-  /* ${centralContainer} */
-  display: flex;
-  flex-wrap: no-wrap;
-  gap: 10px;
-  margin-bottom: 30px;
-  margin-top: 20px;
+	display: flex;
+	flex-wrap: no-wrap;
+	gap: 10px;
+	margin-bottom: 30px;
+	margin-top: 20px;
 }
 
 /* export const PaginationItem = styled.div<{ $isActive: boolean }>`
@@ -28,3 +25,26 @@
     color: #fff;
   }
 `; */
+
+.prev,
+.next {
+	color: white;
+	background-color: var(--colorBlue);
+	border: 1px solid var(--colorBlue);
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	width: 70px;
+	height: 35px;
+	cursor: pointer;
+	/* transition: all 0.3s ease 0s; */
+	font-size: 18px;
+}
+
+.prev:hover,
+.next:hover {
+	background-color: var(--colorOrange);
+	border: 1px solid var(--colorOrange);
+}
