@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { ProductItem } from '../ProductItem/ProductItem'
 import s from './ProductList.module.css'
@@ -7,13 +8,15 @@ export const ProductList = () => {
   const [productsId, setProductsId] = useState([])
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const currentPage = useSelector((state) => state.pagination.currentPage)
 
   useEffect(() => {
-    getProductsId().then((data) => {
+    getProductsId({ offset: currentPage, limit: 50 }).then((data) => {
       const productUnikId = Array.from(new Set(data))
       setProductsId(productUnikId)
     })
-  }, [])
+    console.log('currentPagep', currentPage)
+  }, [currentPage])
 
   useEffect(() => {
     getRroducts({ action: 'get_items', params: { ids: productsId } }).then(
@@ -22,7 +25,7 @@ export const ProductList = () => {
         setIsLoading(false)
       },
     )
-  }, [isLoading])
+  }, [isLoading, productsId])
 
   return (
     <>

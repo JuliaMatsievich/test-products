@@ -2,7 +2,7 @@ import { md5 } from 'js-md5'
 import { PASSWORD, URL } from '../../utils/constants'
 import { getFormatDate } from '../../helpers/getFormatDateFunc'
 
-export const getProductsId = async () => {
+export const getProductsId = async ({ offset, limit }) => {
   return fetch(URL, {
     method: 'POST',
     headers: {
@@ -11,7 +11,7 @@ export const getProductsId = async () => {
     },
     body: JSON.stringify({
       action: 'get_ids',
-      params: { offset: 1, limit: 50 },
+      params: { offset, limit },
     }),
   })
     .then((response) => response.json())

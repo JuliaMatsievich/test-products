@@ -44,7 +44,29 @@
 }
 
 .prev:hover,
-.next:hover {
+.next:hover,
+.page:hover {
+	background-color: var(--colorOrange);
+	border: 1px solid var(--colorOrange);
+}
+
+.page {
+	color: white;
+	background-color: var(--colorBlue);
+	border: 1px solid var(--colorBlue);
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	font-size: 18px;
+}
+
+.active {
 	background-color: var(--colorOrange);
 	border: 1px solid var(--colorOrange);
 }
