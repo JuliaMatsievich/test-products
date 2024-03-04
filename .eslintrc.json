@@ -8,8 +8,8 @@
     "plugin:react/recommended",
     "airbnb",
     "plugin:react/jsx-runtime",
-    // "plugin:react-hooks/recommended",
-    // "plugin:import/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:import/recommended",
     "prettier"
   ],
   "parserOptions": {
@@ -19,6 +19,7 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "react/prop-types": 0,
+    "arrow-body-style": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/prefer-default-export": "off",
     "no-console": "off",
@@ -27,13 +28,18 @@
       { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
     ],
     "prettier/prettier": [
-      "warn",
+      "error",
       {
         "endOfLine": "auto"
       }
     ],
+    "no-plusplus": "off",
     "react/function-component-definition": 0,
     "react/jsx-no-useless-fragment": 0,
-    "react/no-array-index-key": 0
+    "react/no-array-index-key": 0,
+    "no-param-reassign": [
+      "error",
+      { "ignorePropertyModificationsFor": ["state"] }
+    ]
   }
 }
